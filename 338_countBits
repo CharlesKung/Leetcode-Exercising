@@ -1,0 +1,19 @@
+//92ms
+
+class Solution {
+public:
+    vector<int> countBits(int num) {
+        vector<int> gagaga(num+1);
+        gagaga[0]=0;//we know that for 0, it has 0 1s;
+        int k=1;
+        for(int i=1;i<=num;){
+            while(i<2*k && i<=num){
+                gagaga[i]=gagaga[i-k]+1;
+                i++;
+            }
+            k=k*2;
+        }
+        return gagaga;
+    }
+};
+
