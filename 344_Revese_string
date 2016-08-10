@@ -1,0 +1,42 @@
+//first solution
+//c++
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+class Solution1 {
+public:
+string reverseString(string s) {
+    string r;
+    unsigned long l=s.size();
+    for(int i=0;i<l;i++){
+        r+=s[l-1-i];
+    }
+    return r;
+}
+};
+
+class Solution2 {
+public:
+string reverseString(string s) {
+    string r;
+    unsigned long l=s.size();
+    for(int i=0;i<l;i++){
+        r+=s[l-1-i];
+    }
+    return r;
+}
+};
+
+//if you want to test these two code in leetcode remember to delete the number "1" or "2"
+//test case:
+
+int main(){
+    string s,r;
+    cin>>s;// or use s="hello";
+    r=reverseString(s);
+    cout<<r<<endl;
+    return 0;
+}
