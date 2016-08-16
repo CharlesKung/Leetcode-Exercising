@@ -10,3 +10,5 @@ public:
 };
 
 #pay attention to the bit manipulation
+#another way to solve this problem is to use hash table 
+#but i haven't tried that.[if u r interested ]
