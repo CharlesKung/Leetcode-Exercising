@@ -1,0 +1,42 @@
+#complex version which uses loop 
+#a better algorithem can realize it without any loop or recursion
+
+class Solution {
+public:
+    int addDigits(int num) {
+       int result=100;
+        while(result>=10){
+            result=0;
+            while(num!=0){
+                result+=num%10;
+                num=num/10;
+            }
+            num=result;
+        }
+        return result;
+       
+   
+    }
+};
+
+#a better collected on the Internet.
+#you can get help from the site 
+#https://en.wikipedia.org/wiki/Digital_root
+
+#PS. In fact, after several tests(maybe a big number, or if you can try to find a #typical number for all the possible result from 0 to 9), we can find that 9 is a #special number. E.x. all the [9*n]'s result is 9. So after trying nums divised by #9, we can find that the modular is a better solution
+
+class Solution {
+public:
+    int addDigits(int num) {
+        int result=num%9;
+        
+        if (num==0) return 0;
+        
+        else if(result==0) return 9;
+        
+        else return result;
+    }
+};
+
+#or a aggregated one 
+
