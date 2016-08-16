@@ -1,0 +1,15 @@
+class Solution {
+public:
+    bool canWinNim(int n) {
+        int r;
+        r=n%4;
+        bool result;
+        if(r==0) {result=false;}
+        else {result=true;}
+        return result;
+    }
+};
+
+#In fact, as I will take the first turn, we can easily find that only when the #remainder of n divised by 4 is equal to 0
+
+#the problem can be expanded to A persons and N stones. That will be much #interesting
