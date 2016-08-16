@@ -1,0 +1,12 @@
+class Solution {
+public:
+    int singleNumber(vector<int>& nums) {
+        int single,i;
+        i=1;
+        single=nums[0];
+        for(;i<nums.size();i++) single^=nums[i];
+        return single;
+    }
+};
+
+#pay attention to the bit manipulation
